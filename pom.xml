@@ -9,6 +9,7 @@
         <module>eureka_server_9002</module>
         <module>eureka_server_9004</module>
         <module>consumer_9090</module>
+        <module>dept_service_hystrix_9005</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
