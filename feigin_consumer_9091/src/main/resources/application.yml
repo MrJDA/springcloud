@@ -9,3 +9,6 @@ eureka:
 spring:
   application:
     name: feign_consumer
+feign:
+  hystrix:
+    enabled: true

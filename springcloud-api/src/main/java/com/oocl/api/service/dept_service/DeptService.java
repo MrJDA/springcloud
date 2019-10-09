@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(value = "DEPTSERVICEPROVIDER")
+//@FeignClient(value = "DEPTSERVICEPROVIDER")
+@FeignClient(value = "DEPTSERVICEPROVIDER", fallbackFactory = DeptServiceClientFallbackFactory.class)
 public interface DeptService {
     @GetMapping("/dept/getAllDepts")
     public List<Dept> getAllDepts();
