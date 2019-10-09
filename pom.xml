@@ -11,7 +11,6 @@
         <module>consumer_9090</module>
         <module>dept_service_hystrix_9005</module>
         <module>dept_service_provider8002</module>
-        <module>dept_service_provider8004</module>
         <module>dpet_service_provider8003</module>
         <module>feigin_consumer_9091</module>
     </modules>

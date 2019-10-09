@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("/dept/hystrix")
+@RequestMapping("/dept")
 @CrossOrigin
 public class DeptController {
 
@@ -22,10 +23,13 @@ public class DeptController {
     @GetMapping("/getAllDepts")
     @HystrixCommand(fallbackMethod = "helloError")
     public List<Dept> getAllDepts(){
+        if(true){
+            throw new RuntimeException("没有对应的信息");
+        }
         return  deptService.getAllDepts();
     }
 
     public List<Dept> helloError(){
-        return null;
+        return Arrays.asList(new Dept("no thing", "nothing"));
     }
 }

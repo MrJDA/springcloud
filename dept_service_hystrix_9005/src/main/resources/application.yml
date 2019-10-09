@@ -2,14 +2,14 @@ server:
   port: 9005
 spring:
   application:
-    name: DEPT-SERVICE-HYSTRIX
+    name: DEPTSERVICEPROVIDER
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:9001/eureka/,http://localhost:9002/eureka/,http://localhost:9004/eureka/
   instance:
     prefer-ip-address: true
-    instance-id: dept-service-hystrix-9005
+    instance-id: DEPTSERVICEPROVIDER-hystrix-9005
 info:
   app.name: dept-service-hystrix-9005
   company.name: www.baidu.com
