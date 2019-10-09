@@ -12,7 +12,8 @@ public class Dept implements Serializable {
     private Integer employerNumber;
     private String db_source;
 
-    public Dept(String deptName){
+    public Dept(String deptName,String db_source){
         this.deptName = deptName;
+        this.db_source = db_source;
     }
 }

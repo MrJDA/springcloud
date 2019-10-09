@@ -9,6 +9,6 @@ import java.util.List;
 @Service
 public class DeptService {
     public List<Dept> getAllDepts(){
-        return Arrays.asList(new Dept("BA", "db1"), new Dept("FW", "db1"));
+        return Arrays.asList(new Dept("BA", "db3"), new Dept("FW","db3"));
     }
 }

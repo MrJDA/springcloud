@@ -1,8 +1,7 @@
-package com.oocl.hystrix.controller;
+package com.oocl.service_provider.controller;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.oocl.api.entites.Dept;
-import com.oocl.hystrix.service.DeptService;
+import com.oocl.service_provider.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/dept/hystrix")
+@RequestMapping("/dept")
 @CrossOrigin
 public class DeptController {
 
@@ -20,12 +19,7 @@ public class DeptController {
     private DeptService deptService;
 
     @GetMapping("/getAllDepts")
-    @HystrixCommand(fallbackMethod = "helloError")
     public List<Dept> getAllDepts(){
         return  deptService.getAllDepts();
-    }
-
-    public List<Dept> helloError(){
-        return null;
     }
 }

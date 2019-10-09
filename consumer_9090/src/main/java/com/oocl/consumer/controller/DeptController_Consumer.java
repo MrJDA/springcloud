@@ -24,9 +24,9 @@ public class DeptController_Consumer {
     @GetMapping("/getAllDepts")
     public ResponseEntity getAllDepts() {
         ResponseEntity<List> responseEntity = restTemplate.getForEntity(RESET_URL_PREFIX + "/dept/getAllDepts", List.class);
-        System.out.println(responseEntity.getStatusCode());
-        System.out.println(responseEntity.getHeaders());
-        System.out.println(responseEntity.getBody());
+//        System.out.println(responseEntity.getStatusCode());
+//        System.out.println(responseEntity.getHeaders());
+//        System.out.println(responseEntity.getBody());
         return responseEntity;
     }
 }
