@@ -1,17 +1,16 @@
-package com.oocl.consumer;
+package com.oocl.feign_consumer;
 
-import com.oocl.consumer.configure.ConfigBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
-//@RibbonClient(name = "DEPTSERVICEPROVIDER", configuration = MyRule.class)  //使用自定义负载均衡规则
-@RibbonClient(name = "DEPTSERVICEPROVIDER")
-public class ConsumerApplication {
+@EnableFeignClients(basePackages = "com.oocl.api.service.dept_service")
+public class FeignConsumerApplication {
     public static void main(String[] args){
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(FeignConsumerApplication.class, args);
     }
 }
