@@ -13,6 +13,7 @@
         <module>dept_service_provider8002</module>
         <module>dpet_service_provider8003</module>
         <module>feigin_consumer_9091</module>
+        <module>zuul_gateway_5001</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
