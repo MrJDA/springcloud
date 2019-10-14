@@ -14,6 +14,7 @@
         <module>dpet_service_provider8003</module>
         <module>feigin_consumer_9091</module>
         <module>zuul_gateway_5001</module>
+        <module>message_service_provider8082</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

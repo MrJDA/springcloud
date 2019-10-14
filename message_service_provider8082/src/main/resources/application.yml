@@ -1,25 +1,23 @@
 server:
-  port: 8001
-
+  port: 8082
 spring:
   application:
-    name: DEPTSERVICEPROVIDER
+    name: message_service_provider
   rabbitmq:
-#    port: 15672
+    #    port: 15672
     username: guest
     password: guest
     addresses: 127.0.0.1
     virtual-host: /
     port: 5672
-  cloud:
-    bus:
-      enabled: true
-    trace:
-      enabled: true
+    cloud:
+      bus:
+        enabled: true
+      trace:
+        enabled: true
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:9001/eureka/,http://localhost:9002/eureka/,http://localhost:9004/eureka/
   instance:
     prefer-ip-address: true
-

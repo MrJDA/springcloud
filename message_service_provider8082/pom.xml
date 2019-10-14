@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dept_service_provider8001</artifactId>
+    <artifactId>message_service_provider8082</artifactId>
 
     <dependencies>
         <dependency>
@@ -50,5 +50,4 @@
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
     </dependencies>
-
 </project>

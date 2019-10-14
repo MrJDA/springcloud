@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
-@Component
+@Component   //一定要添加
 public class DeptServiceClientFallbackFactory implements FallbackFactory<DeptService> {
     @Override
     public DeptService create(Throwable throwable) {
